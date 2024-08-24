@@ -17,6 +17,10 @@ def index():
 def home():
     return render_template('home.html')
 
+@app.route('/register')
+def registro():
+    return render_template('register.html')
+
 '''
 @app.route('/add_user/<nombre>/<email>')
 def add_user(nombre, email):
