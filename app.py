@@ -4,13 +4,18 @@ from extensions import db
 from config import app
 
 
+
 @app.before_first_request
 def create_tables():
     db.create_all()
 
 @app.route('/')
-def home():
+def index():
     return render_template('index.html')
+
+@app.route('/home')
+def home():
+    return render_template('home.html')
 
 '''
 @app.route('/add_user/<nombre>/<email>')
