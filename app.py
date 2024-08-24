@@ -10,7 +10,7 @@ def create_tables():
 
 @app.route('/')
 def home():
-    return render_template('home.html')
+    return render_template('index.html')
 
 '''
 @app.route('/add_user/<nombre>/<email>')
